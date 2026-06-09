@@ -96,7 +96,7 @@ export default function Portfolio() {
   const [lang, setLang] = useState<"ar" | "en">("ar");
   const [lightsOn, setLightsOn] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [isCvOpen, setIsCvOpen] = useState(false); // State للتحكم في فتح الـ CV
+  const [isCvOpen, setIsCvOpen] = useState(false);
   const t = translations[lang];
 
   useEffect(() => {
@@ -154,7 +154,6 @@ export default function Portfolio() {
 
   return (
     <>
-      {/* شاشة التحميل الافتتاحية الخاطفة */}
       <AnimatePresence>
         {loading && (
           <motion.div
@@ -190,7 +189,6 @@ export default function Portfolio() {
 
       <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden font-sans pb-12" dir={t.dir}>
         
-        {/* شبكة اللمبات الخارقة الساطعة */}
         <div className="fixed inset-0 opacity-100 pointer-events-none grid grid-cols-6 sm:grid-cols-10 md:grid-cols-16 gap-3 p-3 z-10 overflow-hidden w-full h-full drop-shadow-[0_0_35px_rgba(52,211,153,0.6)]">
           {Array.from({ length: 320 }).map((_, i) => (
             <motion.div
@@ -215,10 +213,8 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* غلاف الحركات المتتابعة الهابطة من الأعلى */}
         <motion.div variants={containerVariants} initial="hidden" animate={loading ? "hidden" : "show"}>
           
-          {/* الـ Header */}
           <motion.header className="relative z-20 max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-emerald-500/30 bg-slate-950/90 backdrop-blur-xl shadow-lg">
             <div className="text-xl font-bold tracking-wider text-emerald-400 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
               AMR <span className="text-white">ELSAYED</span>
@@ -233,7 +229,6 @@ export default function Portfolio() {
 
           <main className="relative z-20 max-w-6xl mx-auto px-6 py-12 space-y-24">
             
-            {/* الـ Hero وصورتك الشخصية */}
             <motion.section variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 bg-slate-950/90 p-8 rounded-2xl backdrop-blur-xl border border-emerald-500/20 shadow-2xl">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
@@ -245,7 +240,6 @@ export default function Portfolio() {
                 <p className="text-slate-200 text-lg leading-relaxed">{t.heroBio}</p>
                 
                 <div className="flex flex-wrap gap-4 pt-2">
-                  {/* تحويل الزر ليقوم بفتح نافذة منبثقة آمنة وبدون مشاكل توجيه */}
                   <button 
                     onClick={() => setIsCvOpen(true)}
                     className="px-5 py-3 bg-slate-900 border-2 border-emerald-400 text-emerald-400 font-bold rounded-xl hover:bg-emerald-400 hover:text-black shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-300"
@@ -278,7 +272,6 @@ export default function Portfolio() {
               </div>
             </motion.section>
 
-            {/* قسم الإحصائيات */}
             <motion.section variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {t.stats.map((stat, index) => (
                 <div key={index} className="bg-slate-950/90 border border-emerald-500/20 p-6 rounded-2xl text-center backdrop-blur-xl shadow-xl">
@@ -288,7 +281,6 @@ export default function Portfolio() {
               ))}
             </motion.section>
 
-            {/* قسم الأدوات */}
             <motion.section variants={itemVariants} className="space-y-8 bg-slate-950/90 p-8 rounded-2xl backdrop-blur-xl border border-emerald-500/20 shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-emerald-400 pl-3 text-white drop-shadow-[0_0_5px_#10b981]">
                 {t.toolsTitle}
@@ -306,7 +298,6 @@ export default function Portfolio() {
               </div>
             </motion.section>
 
-            {/* قسم المهارات */}
             <motion.section variants={itemVariants} className="space-y-8 bg-slate-950/90 p-8 rounded-2xl backdrop-blur-xl border border-emerald-500/20 shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-emerald-400 pl-3 text-white drop-shadow-[0_0_5px_#10b981]">
                 {t.skillsTitle}
@@ -325,7 +316,6 @@ export default function Portfolio() {
               </div>
             </motion.section>
 
-            {/* معرض الأعمال */}
             <motion.section variants={itemVariants} className="space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-emerald-400 pl-3 text-white bg-slate-950/90 px-5 py-2 inline-block rounded border border-emerald-500/20 shadow-xl">
                 {t.portfolioTitle}
@@ -359,7 +349,6 @@ export default function Portfolio() {
               </div>
             </motion.section>
 
-            {/* قسم آراء ومراجعات العملاء */}
             <motion.section variants={itemVariants} className="space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold border-l-4 border-emerald-400 pl-3 text-white bg-slate-950/90 px-5 py-2 inline-block rounded border border-emerald-500/20 shadow-xl">
                 {t.testimonialsTitle}
@@ -385,7 +374,6 @@ export default function Portfolio() {
               </div>
             </motion.section>
 
-            {/* التواصل السريع */}
             <motion.section variants={itemVariants} className="bg-slate-950/95 backdrop-blur-xl border-2 border-emerald-400 rounded-2xl p-8 text-center space-y-6 shadow-[0_0_30px_rgba(16,185,129,0.2)]">
               <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow-[0_0_8px_#10b981]">{t.contactTitle}</h2>
               <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-4">
@@ -408,7 +396,6 @@ export default function Portfolio() {
         </motion.div>
       </div>
 
-      {/* الـ Modal المنبثق لعرض السيرة الذاتية باحترافية وسلاسة تامة */}
       <AnimatePresence>
         {isCvOpen && (
           <motion.div 
@@ -423,7 +410,7 @@ export default function Portfolio() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              onClick={(e) => e.stopPropagation()} // منع الإغلاق عند الضغط على الصورة نفسها
+              onClick={(e) => e.stopPropagation()}
             >
               <button 
                 onClick={() => setIsCvOpen(false)}
@@ -438,7 +425,6 @@ export default function Portfolio() {
                   alt="Amr Elsayed CV" 
                   className="w-full h-auto object-contain rounded"
                   onError={(e) => { 
-                    // إذا كان الامتداد png يحول عليه تلقائياً لمنع ظهور صورة مكسورة
                     (e.target as HTMLImageElement).src = "/arbic.png"; 
                   }}
                 />
