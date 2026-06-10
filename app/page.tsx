@@ -147,10 +147,18 @@ export default function Portfolio() {
     show: { opacity: 1, transition: { staggerChildren: 0.12 } }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: -40 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 15 } }
-  };
+  const itemVariants: any = {
+  hidden: { opacity: 0, y: -40 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      type: "spring", 
+      stiffness: 100, 
+      damping: 15 
+    } 
+  }
+};
 
   return (
     <>
