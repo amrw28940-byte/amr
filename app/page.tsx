@@ -197,9 +197,8 @@ export default function Portfolio() {
 
       <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden font-sans pb-12" dir={t.dir}>
         
-        {/* تم تعديل الـ opacity إلى 0.05 لتقليل السطوع */}
-        <div className="fixed inset-0 opacity-0.05 pointer-events-none grid grid-cols-6 sm:grid-cols-10 md:grid-cols-16 gap-3 p-3 z-10 overflow-hidden w-full h-full drop-shadow-[0_0_35px_rgba(52,211,153,0.6)]">
-          {Array.from({ length: 100 }).map((_, i) => (
+        <div className="fixed inset-0 opacity-[0.05] pointer-events-none grid grid-cols-6 sm:grid-cols-10 md:grid-cols-16 gap-3 p-3 z-10 overflow-hidden w-full h-full drop-shadow-[0_0_35px_rgba(52,211,153,0.6)]">
+          {Array.from({ length: 200 }).map((_, i) => (
             <motion.div
               key={i}
               className="h-6 w-full rounded-sm shadow-[0_0_25px_#10b981,0_0_45px_#34d399]"
