@@ -113,6 +113,7 @@ export default function Portfolio() {
 
   const projects = [
     { name: "Galenus Translation", url: "https://galenus-translation.com/", cat: "seo" },
+    { name: "munzilike", url: "https://munzilike.com/", cat: "seo" },
     { name: "Tech Motivations", url: "https://techmotivations.com/ar/", cat: "seo" },
     { name: "Slife Home", url: "https://slifehome.com/", cat: "seo" },
     { name: "Eye Contour Cream", url: "https://artistic-touch1.myeasyorders.com/products/Eye-Contour-Cream", cat: "landing" },
